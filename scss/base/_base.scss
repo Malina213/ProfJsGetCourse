@@ -1,0 +1,28 @@
+
+body{
+    font-family: var(--OpenSans);
+    background-color: var(--bodyBG);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.container{
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.none{
+    display: none;
+}
+.no-scroll{
+    overflow: hidden;
+}
+img{
+    pointer-events: none;
+}

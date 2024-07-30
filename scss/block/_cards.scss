@@ -1,0 +1,131 @@
+
+.shop{
+    &__inner{
+        margin-top: 48px;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 40px;
+    }
+    &__left{
+        grid-column: 9 span;
+        padding-inline: 10px;
+    }
+    &__rigth{
+        grid-column: 3 span;
+        padding-inline: 37px;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 44px;
+        position: relative;
+
+        &::before{
+            position: absolute;
+            content: '';
+            width: 4px;
+            height: 100%;
+            border-radius: 4px;
+            background-color: #1A1F1680;
+            left: 0;
+        }
+
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(4,229px);
+        gap: 45px 48px;
+        text-align: center;
+    }
+    &__basket{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__basket-link{
+        gap: 10px;
+        font-size: 20px;
+        padding: 11px 26px;
+        border-radius: 14px;
+        color: var(--white);
+        background-color: var(--black);
+    }
+    
+}
+
+
+.shop__basket-title,
+.shop__orders-title{
+    font-size: 40px;
+    line-height: 53px;
+}
+.card__top{
+    display: block;
+    cursor: pointer;
+    padding: 32px;
+    background-color: var(--white);
+    border-radius: 22px;
+    transition: scale 0.5s ease-in-out;
+    &:hover{
+        scale: 1.1;
+        transition: scale 0.3s ease-in;
+
+    }
+}
+
+.card__name{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    margin-top: 25px;
+    padding-inline: 16px;
+}
+.card__title{
+    font-size: 17px;
+    line-height: 27px;
+    color: var(--black);
+}
+.card__price{
+    line-height: 27px;
+    color: var(--black);
+}
+.card__series{
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--grey);
+}
+.card__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 19px;
+    padding-inline: 24px;
+}
+
+.card__button{
+    padding: 8px;
+    border-radius: 9px;
+    background-color: var(--black);
+}
+
+//Корзина
+.shop__basket-list{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.basket__item{
+    position: relative;
+    padding: 5px;
+    background-color: var(--white);
+    border-radius: 12px;
+    img{
+        pointer-events: none;
+    }
+
+}
+.basket__item-button{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
